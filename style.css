@@ -1,6 +1,23 @@
 /* Zaczęte 18.09.2025 – zrestartowane 21.09.2025 z pomocą ChatGPT ❤️ */
 
-html {
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #000; /* <<< to dodaje brakujące „pod-tło” */
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('images/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  color: #eaeaea;
+  font-size: 125%;
+  font-family: monospace;
+  overflow-x: hidden;
+
   opacity: 0;
   transform: translateY(20px);
   animation: fadeIn 1.2s ease-out forwards;
@@ -11,23 +28,6 @@ html {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  color: #eaeaea;
-  font-family: monospace;
-  overflow-x: hidden;
-  background-color:black;
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('images/background.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 /* Header centrowany na środku ekranu */
