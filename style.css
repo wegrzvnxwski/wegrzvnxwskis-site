@@ -13,6 +13,7 @@ body {
   color: #eaeaea;
   font-size:125%;
   height:100vh;
+  overflow:hidden;
   font-family: monospace; /*do zmiany na coś innego*/
   opacity: 0;
   transform: translateY(20px);
