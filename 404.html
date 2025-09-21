@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+<meta charset="utf-8">
+<title>Oh no, 404!</title>
+<style>
+  body {
+  background-color: black;
+  color: #15b800;
+  font-family: monospace; /*do zmiany na coś innego*/
+  overflow-x: hidden;
+  overflow-y: auto;
+  height:100vh;
+}
+
+/*.stopka	{
+  background-color: black;
+  color:white;
+  font-family: 'Monospace';
+  font-size: 12px;
+  text-align: center;
+  clear:both;
+  position:fixed;
+  bottom: 0;
+  left:0;
+  right:0;
+  width: 100%;
+  padding: 10px 0; 
+}*/
+    .error {
+  font-family:'Monospace';
+   flex: 1;  /* zepchnięcie stopki */
+  padding: 40px;
+}
+
+.error img {
+  float: left;
+   width:350px;
+  height:auto;
+  display:block;
+}
+
+.error h1 {
+  text-align:center;
+  font-size:48px;
+}
+
+.error button {
+  display:block;
+  margin:0 auto;
+  padding: 10px 20px;
+  background-color: #000000;
+  border: 2px solid #15b800;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  color:#15b800;
+  font-family:'Monospace';
+  transition: 0.3s ease;
+}
+
+.error button:hover {
+  background-color: #121212;
+  box-shadow: 0 0 20px #0c6300;
+}
+</style>
+</head>
+
+<body>
+    <div class="error">
+        <img src="images/sparrow.png" alt="wróbel ze znakiem zapytania" class="wjubel">
+        <h1>Oh no, 404!</h1>
+        <h3>Ta strona w teorii nie powinna istnieć, ale widzisz ją, bo strona, którą poszukujesz nie istnieje. <br> Chcesz stąd wyjść? Spokojna głowa! Kliknij w przycisk poniżej, aby wrócić na stronę główną!</h3>
+        <br><br><br><br>
+        <button onclick="location.href='index-pl.html'">Back to safety</button>
+    </div>
+
+<!-- <div class="stopka">
+<p>to nie CMS, to człowiek i jego wiedza, którą zdobył na wia i Tsiai (i bycie samoukiem). stworzone przez Kacpra. &#169; 2025</p>
+</div> -->
+
+</body>
+</html>

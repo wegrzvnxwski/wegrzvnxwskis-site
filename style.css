@@ -1,0 +1,92 @@
+/*zacząłem robić to gówno 18.09.2025 */
+
+body {
+  /*background-color: #121212;*/
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), /* cień */
+    url('images/background.png');
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: #eaeaea;
+  font-size:125%;
+  height:100vh;
+  font-family: monospace; /*do zmiany na coś innego*/
+  overflow-x: hidden;
+  overflow-y: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1.2s ease-out forwards; /* tylko raz po załadowaniu */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  color: white;
+  font-family: monospace;
+}
+
+.linki {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.linki img {
+  width: 48px; /* lub 64px jeśli chcesz większe */
+  height: auto;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  filter: grayscale(0.2) brightness(0.9);
+}
+
+.linki img:hover {
+  transform: scale(1.1);
+  filter: none;
+}
+
+.ahead{
+  text-align: center;
+}
+
+.albums{
+  margin-top: 2rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.albums img {
+  width: 175px;
+  height:auto;
+  transition: 0.3s ease;
+}
+
+.albums img:hover{
+  transform: scale(1.05);
+  background-color: #000000;
+  box-shadow: 0 0 15px #555;
+}
+
+.ending {
+  text-align:center;
+}
