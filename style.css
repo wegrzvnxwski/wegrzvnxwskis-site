@@ -4,18 +4,17 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #000; /* <<< to dodaje brakujące „pod-tło” */
-  background-image: 
+  color: #eaeaea;
+  font-family: monospace;
+  font-size: 110%;
+  overflow-x: hidden;
+  background: 
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url('images/background.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-
-  color: #eaeaea;
-  font-family: monospace;
-  overflow-x: hidden;
 
   opacity: 0;
   transform: translateY(20px);
@@ -66,6 +65,7 @@ html, body {
   filter: none;
 }
 
+/* od tego momentu wszystko jest nadal moje, na szczęście */
 .ahead{
   text-align: center;
 }
