@@ -12,7 +12,6 @@ body {
   background-position: center;
   background-attachment: fixed;
   color: #eaeaea;
-  font-size: clamp(1rem, 1.2vw, 1.4rem);
   height:100vh;
   font-family: monospace; /*do zmiany na coś innego*/
   overflow-x: hidden;
