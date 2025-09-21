@@ -1,67 +1,70 @@
-/*zacząłem robić to gówno 18.09.2025 */
+/* Zaczęte 18.09.2025 – zrestartowane 21.09.2025 z pomocą ChatGPT ❤️ */
 
-body {
-background-color: #000;
-background:
-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), /* cień */
-url('images/background.png');
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: #eaeaea;
+  font-family: monospace;
+  font-size: 125%;
+  overflow-x: hidden;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('images/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center;
-background-attachment: fixed;
-color: #eaeaea;
-font-size:125%;
-height:100vh;
-font-family: monospace; /*do zmiany na coś innego*/
-overflow-x: hidden;
-overflow: hidden;
-opacity: 0;
-transform: translateY(20px);
-animation: fadeIn 1.2s ease-out forwards; /* tylko raz po załadowaniu */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1.2s ease-out forwards;
 }
 
 @keyframes fadeIn {
-to {
-opacity: 1;
-transform: translateY(0);
-}
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/* Header centrowany na środku ekranu */
 .header {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-padding: 3rem 1rem;
-height:100vh;
-text-align: center;
+  min-height: 100vh; /* żeby zajmowało cały ekran */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1rem;
 }
 
+/* Nagłówek */
 .header h1 {
-font-size: 4rem;
-margin-bottom: 2rem;
-color: white;
-font-family: monospace;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  font-family: monospace;
 }
 
+/* Ikony linków */
 .linki {
-display: flex;
-gap: 20px;
-justify-content: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .linki img {
-width: 48px; /* lub 64px */
-height: auto;
-transition: transform 0.2s ease, filter 0.2s ease;
-filter: grayscale(0.2) brightness(0.9);
+  width: 48px;
+  height: auto;
+  filter: grayscale(0.2) brightness(0.9);
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .linki img:hover {
-transform: scale(1.1);
-filter: none;
+  transform: scale(1.1);
+  filter: none;
 }
+
 .ahead{
   text-align: center;
 }
