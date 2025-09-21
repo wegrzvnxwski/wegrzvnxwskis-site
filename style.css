@@ -13,7 +13,7 @@ background-attachment: fixed;
 color: #eaeaea;
 font-size:125%;
 height:100vh;
-font-family: monospace; /do zmiany na coś innego/
+font-family: monospace; /*do zmiany na coś innego*/
 overflow-x: hidden;
 overflow: hidden;
 opacity: 0;
