@@ -2,7 +2,6 @@
 
 body {
   /*background-color: #121212;*/
-  background-color:#000;
   background: 
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), /* cień */
     url('images/background.png');
@@ -12,6 +11,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   color: #eaeaea;
+  font-size:125%;
   height:100vh;
   font-family: monospace; /*do zmiany na coś innego*/
   overflow-x: hidden;
@@ -28,21 +28,7 @@ body {
   }
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-
 .header {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
