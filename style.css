@@ -1,7 +1,7 @@
 /*zacząłem robić to gówno 18.09.2025 */
 
 body {
-  /*background-color: #121212;*/
+  background-color: #000;
   background: 
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), /* cień */
     url('images/background.png');
@@ -11,11 +11,11 @@ body {
   background-position: center;
   background-attachment: fixed;
   color: #eaeaea;
-  font-size:125%;
+  font-size:100%;
   height:100vh;
   font-family: monospace; /*do zmiany na coś innego*/
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeIn 1.2s ease-out forwards; /* tylko raz po załadowaniu */
