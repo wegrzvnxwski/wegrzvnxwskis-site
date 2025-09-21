@@ -12,7 +12,8 @@ html, body {
   background-attachment: fixed;
   color: #eaeaea;
   font-size:125%;
-  height:100vh;
+  height:100%;
+  min-height:100vh;
   font-family: monospace; /*do zmiany na coś innego*/
   opacity: 0;
   transform: translateY(20px);
