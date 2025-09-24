@@ -74,7 +74,11 @@ body {
   text-align: center;
 }
 
-.aboutme h1{
+.aboutme {
+  margin-left:10px;
+}
+
+.aboutme h1 {
   text-align:center;
 }
 
