@@ -74,6 +74,10 @@ body {
   text-align: center;
 }
 
+.aboutme h1{
+  text-align:center;
+}
+
 .albums{
   margin-top: 2rem;
   padding: 0 1rem;
