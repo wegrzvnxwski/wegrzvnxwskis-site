@@ -79,6 +79,11 @@ body {
   padding-left:10px;
 }
 
+.aboutme img {
+  width:48px;
+  height:auto;
+}
+
 .aboutme h1 {
   text-align:center;
 }
