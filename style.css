@@ -32,6 +32,12 @@ body {
 } */
 
 /* Header centrowany na środku ekranu */
+
+@font-face {
+  font-family: "my handwriting pl";
+  src: url("my_handwriting_pl.ttf") format("truetype");
+}
+
 .header {
   min-height: 100vh; /* żeby zajmowało cały ekran */
   display: flex;
