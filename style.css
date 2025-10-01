@@ -83,8 +83,10 @@ body {
 }
 
 .aboutme img {
-  width:48px;
+  width:64px;
   height:auto;
+  display: flex;
+  justify-content: center;
 }
 
 .aboutme h1 {
