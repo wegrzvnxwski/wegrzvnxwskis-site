@@ -34,7 +34,7 @@ body {
 /* Header centrowany na środku ekranu */
 
 .header {
-  min-height: 100vh; /* żeby zajmowało cały ekran */
+  height: 100vh; /* żeby zajmowało cały ekran */
   display: flex;
   flex-direction: column;
   justify-content: center;
