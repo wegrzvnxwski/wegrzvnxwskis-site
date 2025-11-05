@@ -1,9 +1,6 @@
-/* Zaczęte 18.09.2025 – zrestartowane 21.09.2025 z pomocą ChatGPT ❤️ */
-
-body {
+html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
   color: #eaeaea;
   font-family: monospace;
   font-size: 110%;
@@ -18,7 +15,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-}
+  scroll-behavior: smooth;
 
   /* opacity: 0;
   transform: translateY(20px);
@@ -31,11 +28,15 @@ body {
     transform: translateY(0);
   }
 } */
+}
 
-/* Header centrowany na środku ekranu */
+p, h2{
+  margin-right: 30px;
+  margin-left:20px;
+}
 
 .header {
-  min-height: 100vh; /* żeby zajmowało cały ekran */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,14 +46,12 @@ body {
   overflow: hidden;
 }
 
-/* Nagłówek */
 .header h1 {
   font-size: 4rem;
   margin-bottom: 2rem;
-  /* font-family: "my handwriting pl"; font zdechł for some reason */
+  /* font-family: "my handwriting pl"; font zdechł for some reason więc nie będzie xD */
 }
 
-/* Ikony linków */
 .linki {
   display: flex;
   justify-content: center;
@@ -71,21 +70,41 @@ body {
   filter: none;
 }
 
-/* od tego momentu wszystko jest nadal moje, na szczęście */
 .ahead{
   text-align: center;
 }
 
-.aboutme {
-  text-indent:8px;
-  padding-left:10px;
+.trnsth1{
+  text-align:center;
+  font-size: 2rem;
 }
 
-.aboutme img {
+.wrap_transit a{
+  color:rgb(154, 181, 255);
+  font-style:italic;
+}
+
+.trnst_vids{ 
+  text-align:center;
+}
+
+.title{
+  text-align:center;
+}
+
+.aboutme, .wrap_transit {
+  text-indent:8px;
+  padding-left:10px;
+  padding-right: 30px;
+  background-color:black;
+  color:white;
+  font-family:monospace;
+}
+
+.back img{
   width:64px;
-  height:auto;
-  display: flex;
-  justify-content: center;
+  height:auto;  
+  margin-left: 15px;
 }
 
 .aboutme h1 {
