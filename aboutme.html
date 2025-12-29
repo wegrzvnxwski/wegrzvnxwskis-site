@@ -2,54 +2,85 @@
 <html lang="pl">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#000000">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nic tu ciekawego, możesz wyjść bez obaw że coś cię ominie. A tak serio to strona o mnie.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.wegrzvnxwski.github.io/wegrzvnxwskis-site/aboutme">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Indie+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/icon.png">
     <title>O mnie - Kacprowa strona</title>
+    <script src="layout.js" defer></script>
 </head>
 
 <body>
-    <h1 class="title">Cześć, jestem Kacper!</h1>
-    <div class="aboutme">
-    <br>
-    <h2>A tak właściwie to kim jestem?</h2>
-    <p>Jestem Kacper, mam 18 lat i chodzę do technikum informatycznego. Interesuję się tematyką sieci komputerowych, cybersec, Linuksem, satelitami zombie i, od niedawna, frontendem. <br> W skrócie: zaprojektuję ci sieć, naprowadzę cię na distro z którego będziesz się cieszyć, opowiem o satelicie Transit 5E-5, mylnie nazywanym Transit 5B-5 oraz nauczę podstaw HTMLa i CSSa. No po prostu ja.</p>
-    <br>
-    <h2>Może jakieś papierki?</h2>
-    <p>Zdałem INF.02 na 96%, INF.03 będzie następne. Strach się bać.</p>
-    <br>
-    <h2>Ulubione gry?</h2>
-    <p>Seria Life is Strange (za wyjątkiem Double Exposure, to już nie LiS) i Minecraft.</p>
-    <br>
-    <h2>Ulubieni wykonawcy?</h2>
-    <p>Linkin Park, Nirvana, Incubus, Superheaven, Daughter i coś tam jeszcze.</p>
-    <br>
-    <h2>Na czym pracuję?</h2>
-    <p>Generalnie rzecz mówiąc, to na ledwo żywym laptopie, głośnawym komputerze i telefonie ze średniej półki. Najczęściej moją ofiarą jednak pada laptop, o dosyć ciekawej specce.</p>
-    <ul>
-        <li>procek: Intel Core i3-6006U @ 2.0GHz</li>
-        <li>grafika: Intel HD Graphics 520/NVIDIA GeForce 940MX (głównie Intel, mało na tym gram)</li>
-        <li>RAM: 4 GB DDR4</li>
-        <li>dysk: 512 GB SSD na SATA</li>
-        <li>system: Linux Mint 22.1 na środowisku GNOME (mmm, masochizm)</li>
-    </ul>
-    <br>
-    <h2>Co jeszcze robię?</h2>
-    <p>Wszystko i nic. Czasami zrobię film na kanał, czasami dodam parę zdjęć na Instagrama, czasami napiszę jakąś stronę, czasami dostanę nerwicy, czasami zepsuję .bashrc.<br> Ogółem siedzę przy komputerze, ale kto by się spodziewał czegoś innego po techniku informatyku xD</p>
-    <br>
-    <h2>Czy robię coś poza tym?</h2>
-    <p>I tak i nie. W sensie jak ktoś mnie poprosi o to, żebym zrobił mu sieć, to pewnie, że to zrobię. Więc nie bójcie się pisać. <b>Discord: wegrzvnxwski._</b></p>
-    <br>
-    <h2>Co dalej?</h2>
-    <p>Nie wiem. Coś na pewno.</p>
-    <br>
-    <h2>Masz zwierza?</h2>
-    <p>Tak, nawet kilka, bo mam kawie domowe. Polecam dla osób, które za często otwierają lodówkę. Po którymś otwarciu odechciewa się słuchać ciągłego WHEEEK WHEEEEEEEK. <br> (Żartuję oczywiście, żeby nie było, kocham te zwierzęta)</p>
-    <br></div>
-
-    <a href="index.html" class="back"><img src="images/back.png" alt="Strona główna" title="Strona główna"></a>
-    
+    <div class="wrapper">
+        <header>
+            <nav id="navbarek"></nav>
+            <h1>Cześć, jestem Kacper!</h1>
+        </header>
+        
+        <main>
+            <div class="aboutme">
+                <section class="abtme">
+                    <h2>Kim jestem?</h2>
+                    <p>Jestem <b>Kacper</b>, mam 18 lat i chodzę do technikum informatycznego. <br> Interesuję się sieciami, cyberbezpieczeństwem, Linuksem, frontendem i <a href="old/transit.html" style="color:#dedede; text-decoration: none;">starymi satelitami zombie</a>. <br> Czasem uczę HTMLa, czasem debuguję czyjeś Wi-Fi (za zgodą oczywiście), a czasem psuję sobie <code>.bashrc</code> o 3 w nocy.</p>
+                </section>
+                <section class="abtme">
+                    <h2>Wyniki i certy</h2>
+                    <ul>
+                        <li><b>INF.02</b> – zdałem na <b>96%</b></li>
+                        <li><b>INF.03</b> – <em>nadchodzi, pray for me</em></li>
+                    </ul>
+                </section>
+                <section class="abtme">
+                    <h2>Ulubione rzeczy</h2>
+                    <ul>
+                        <li><b>Gry:</b> Life is Strange (wszystko oprócz tej nieszczęsnej <em>Double Exposure</em>), Minecraft i Visual Studio Code</li>
+                        <li><b>Muza:</b> Linkin Park, Nirvana, Daughter, Superheaven, Incubus</li>
+                    </ul>
+                </section>
+                <section class="abtme">
+                    <h2>Sprzęt do pracy</h2>
+                    <p>Mój najbardziej doświadczony współpracownik to <b>stary Acer z i3-6006U</b>. <br> Nie szybki, nie cichy, ale służy mi jak stado demonów backendowych.</p>
+                    <p><b>Specyfikacja:</b></p>
+                    <ul>
+                        <li>CPU: Intel Core i3-6006U @ 2.0 GHz</li>
+                        <li>GPU: Intel HD 520 / NVIDIA 940MX (ale grane to i tak na integrze)</li>
+                        <li>RAM: 4GB DDR4</li>
+                        <li>Dysk: 512GB SSD (SATA, ale przynajmniej szybki)</li>
+                        <li>OS: Linux Mint 22.1 (GNOME. been through hell.)</li>
+                    </ul>
+                </section>
+                <section class="abtme">
+                    <h2>Co robię?</h2>
+                    <p>Trochę wszystkiego.</p>
+                    <ul>
+                        <li>Piszę strony (patrz: ten projekt)</li>  
+                        <li>Czasem wrzucę coś na kanał / IG</li>  
+                        <li>Zdarzy się, że pomogę przy sieci lokalnej albo zrobię sobie n-tego NATa, bo kto mi zabroni</li>  
+                        <li>Zdarzy się, że... <em>złamię swoje wewnętrzne zabezpieczenia.</em></li>
+                    </ul>
+                    <p>Tak czy inaczej – siedzę przy komputerze. <br> Ale jakbyś się <b><em>spodziewał czegoś innego po techniku informatyku</em></b>... no to 🤷‍♂️</p>
+                    <small>A najlepiej idzie mi refactor stron. Masz coś, z czego nie jesteś zadowolony? Odezwij się :)</small>
+                </section>
+                <section class="abtme">
+                    <h2>Kontakt</h2>
+                    <p>Jeśli coś potrzebujesz – pisz śmiało.</p>  
+                    <p>Robię sieci, poprawiam CSSy, debuguję systemy, pomagam przy projektowaniu baz danych, profesjonalnie dokarmiam kawie domowe.</p>
+                    <p><b>Discord:</b> wegrzvnxwski._ <br> 
+                    <b>Mail:</b> <a href="mailto:wegrzvnxwski@proton.me">wegrzvnxwski@proton.me</a> <br>
+                    <b>FB:</b> <a href="https://www.facebook.com/forgoteq/">Kacper Ktosiowski</a> <small>(w drodze konieczności, mogę nie odpisać)</small></p>
+                </section>
+            </div>
+            <section class="ending">
+                <img src="discord.png" alt="Mój profil na Discordzie">
+            </section>
+        </main>
+        <footer id="stopka"></footer>
+    </div>
 </body>
 
 </html>

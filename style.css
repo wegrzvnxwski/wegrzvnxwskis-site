@@ -1,9 +1,9 @@
+/* =============== GŁÓWNY STYL =============== */
 html, body {
   margin: 0;
   padding: 0;
-  color: #eaeaea;
-  font-family: monospace;
-  font-size: 110%;
+  color: #dedede;
+  font-family: "Google Sans", sans-serif;
   min-height:100vh;
   width:100%;
   overflow-x: hidden;
@@ -16,26 +16,121 @@ html, body {
   background-position: center;
   background-attachment: fixed;
   scroll-behavior: smooth;
-
-  /* opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 1.2s ease-out forwards;
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-} */
+.wrapper{
+  background-color: #000000e0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-p, h2{
-  margin-right: 30px;
-  margin-left:20px;
+main {
+  flex: 1;
 }
 
-.header {
+h1{
+  font-family: "Indie Flower", monospace;
+  text-align:center;
+  margin-top:20px;
+  font-size:2.5em;
+}
+/* =============== ELEMENTY WSPÓLNE =============== */
+/* navbar, albo chociaż jego namiastka */
+.minimal-nav {
+  display: flex;
+  justify-content: right;
+  gap: 1.25rem;
+  padding: 1rem;
+  background: transparent;
+  font-size:1.25rem;
+  list-style: none;
+}
+
+.minimal-nav img{
+  width:25px;
+  height:auto;
+  opacity:0.7;
+  transition: all 0.3s ease;
+}
+.nav-link img:hover, .currently-here {
+  opacity: 1;
+  scale: 1.25;
+}
+
+/* stopka? o ile można to nazwać stopką */
+.the-veri-end{
+    text-align: center;
+    background-color: #11111198;
+    color: white;
+    padding: 10px 0;
+}
+
+/* =============== ABOUTME.HTML =============== */
+
+.aboutme{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin: 20px 40px;
+  justify-content: center;
+}
+
+.abtme{
+  background-color: #111111c5;
+  padding:20px 20px;
+  flex: 1 1 450px;
+  min-width: 280px;  
+  transition: all 0.3s ease;
+}
+
+.abtme a{
+  color: #a4c4db;
+  text-decoration: none;
+}
+
+.abtme:hover{
+  background: #111;
+  box-shadow: 0 0 10px #222;
+
+}
+
+.ending{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom:20px;
+}
+
+.ending img{
+  max-width: 400px;
+  width:80%;
+}
+
+/* =============== TRANSIT.HTML (przestarzałe) =============== */
+
+.transit{
+  margin:20px 40px;
+}
+
+.trnst-secs a{
+  color:rgb(154, 181, 255);
+  font-style:italic;
+}
+
+.trnst-secs{
+  background-color:#111111b6;
+  padding: 20px 40px;
+}
+
+.trnst-vids{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* =============== INDEX.HTML =============== */
+
+.wrapper-index {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -44,12 +139,12 @@ p, h2{
   text-align: center;
   padding: 0rem 1rem;
   overflow: hidden;
+  background-color: #000000bd;
 }
 
-.header h1 {
-  font-size: 4rem;
+.wrapper-index h1 {
+  font-size: 4.5rem;
   margin-bottom: 2rem;
-  /* font-family: "my handwriting pl"; font zdechł for some reason więc nie będzie xD */
 }
 
 .linki {
@@ -70,45 +165,16 @@ p, h2{
   filter: none;
 }
 
-.ahead{
-  text-align: center;
+@media (max-width: 768px){
+  .wrapper-index h1{
+    font-size:3rem;
+  }
 }
 
-.trnsth1{
-  text-align:center;
-  font-size: 2rem;
-}
+/* =============== ALBUMS.HTML =============== */
 
-.wrap_transit a{
-  color:rgb(154, 181, 255);
-  font-style:italic;
-}
-
-.trnst_vids{ 
-  text-align:center;
-}
-
-.title{
-  text-align:center;
-}
-
-.aboutme, .wrap_transit {
-  text-indent:8px;
-  padding-left:10px;
-  padding-right: 30px;
-  background-color:black;
-  color:white;
-  font-family:monospace;
-}
-
-.back img{
-  width:64px;
-  height:auto;  
-  margin-left: 15px;
-}
-
-.aboutme h1 {
-  text-align:center;
+.alb{
+  background-color: #000000a7;
 }
 
 .albums{
@@ -132,26 +198,28 @@ p, h2{
   box-shadow: 0 0 15px #555;
 }
 
-.ending {
-  text-align:center;
+.adno{
+  text-align: center;
 }
 
-  @media (max-width: 768px) { /* na ogół bym to olał, ale przeklęte mobilki... */
+.terminal{
+  margin: 40px auto;
+  text-align: center;
+  font-size:1.5rem;
+}
 
-  .header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+#mrugaczek::after {
+  content: "█"; 
+  animation: blink 1.2s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
   }
+}
 
-  .trnst_vids iframe {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 560px;
-    height: auto;
-    aspect-ratio: 16/9; /* mam wrażenie że centrowanie na mniejszych ekranach tutaj mogę sobie wsadzić głęboko xD */
-  }
-
+@media (max-width:768px){
   .albums {
     gap: 10px;
     justify-content: center;
@@ -164,4 +232,116 @@ p, h2{
     transition: 0.3s ease;
     margin: 0 auto;
   }
+}
+
+/* =============== GALERIA.HTML =============== */
+
+.gal{
+  font-size:4rem;
+}
+
+.galeria-wrapper{
+  margin-top: 40px;
+  padding: 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.galeria-wrapper a {
+  margin:7px;
+  display: inline-block;
+}
+
+.galeria-wrapper img {
+  transition: 0.3s ease;
+}
+
+.galeria-wrapper img:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #555;
+}
+
+.galeria-poziom img{
+  width:300px;
+  height:auto;
+}
+
+.galeria-pion img{
+  width:auto;
+  height:300px;
+}
+
+.lb-number{
+  display:none !important;
+}
+
+.fake-player {
+  max-width: 400px;
+  margin: 4rem auto 2rem;
+  background: #111;
+  border: 2px solid #333;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #eee;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.track-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cover {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.controls {
+  margin-top: 1rem;
+}
+
+.progbar {
+  background: #333;
+  height: 6px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progbar-filled {
+  width: 37%;
+  background: #fff;
+  height: 100%;
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.buttons button {
+  background: none;
+  border: none;
+  color: #eee;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.buttons img{
+  width:25px;
+  height:auto;
 }

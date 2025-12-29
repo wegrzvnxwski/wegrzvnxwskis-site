@@ -1,86 +1,91 @@
 <!DOCTYPE html>
 <html lang="pl">
 
-<head>
-<meta charset="utf-8">
-<title>Oh no, 404!</title>
-<link rel="icon" href="images/icon.png"> <!-- style jeszcze popraw -->
-<style>
-  body {
-      background-color:#000;
-  background: 
-    url('images/404background.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  color: #15b800;
-  font-family: monospace; /*do zmiany na coś innego*/
-  overflow-y: hidden;
-  overflow-x: auto;
-  height:100vh;
-}
+  <head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#000000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nic tu ciekawego, możesz wyjść bez obaw że coś cię ominie. A tak serio to strona o mnie.">
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/icon.png">
+    <script src="layout.js" defer></script>
+    <title>Oh no, 404!</title>
+    <style>
+        h1 {
+          font-size:3rem;
+        }
 
-/*.stopka	{
-  background-color: black;
-  color:white;
-  font-family: 'Monospace';
-  font-size: 12px;
-  text-align: center;
-  clear:both;
-  position:fixed;
-  bottom: 0;
-  left:0;
-  right:0;
-  width: 100%;
-  padding: 10px 0; 
-}*/
+        .error p {
+          margin:0 50px;
+          font-size:1.25rem;
+        }
 
-.error img {
-  float: left;
-   width:350px;
-  height:auto;
-  display:block;
-}
+        .smol{
+          margin-top:10px;
+          text-align: center;
+        }
 
-.error h1 {
-  text-align:center;
-  font-size:48px;
-}
+        .error button {
+          display:block;
+          margin:25px auto;
+          padding: 10px 20px;
+          background-color: #000000;
+          border: 2px solid #15b800;
+          border-radius: 5px;
+          font-size: 16px;
+          cursor: pointer;
+          color:#15b800;
+          font-family:'Monospace';
+          transition: 0.3s ease;
+        }
 
-.error button {
-  display:block;
-  margin:0 auto;
-  padding: 10px 20px;
-  background-color: #000000;
-  border: 2px solid #15b800;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  color:#15b800;
-  font-family:'Monospace';
-  transition: 0.3s ease;
-}
+        .error button:hover {
+          background-color: #121212;
+          box-shadow: 0 0 20px #0c6300;
+        }
 
-.error button:hover {
-  background-color: #121212;
-  box-shadow: 0 0 20px #0c6300;
-}
-</style>
-</head>
+        .dodatek{
+          margin:20px auto;
+          font-size:1.1rem;
+          text-align: center;
+        }
+    </style>
+  </head>
 
-<body>
-    <div class="error">
-        <!-- <img src="images/sparrow.png" alt="wróbel ze znakiem zapytania" class="wjubel"> -->
-        <h1>Oh no, 404!</h1>
-        <h3>Ta strona w teorii nie powinna istnieć, ale widzisz ją, bo strona, którą poszukujesz nie istnieje. <br> Chcesz stąd wyjść? Spokojna głowa! Kliknij w przycisk poniżej, aby wrócić na stronę główną!</h3>
-        <br><br><br><br>
-        <button onclick="location.href='index.html'">Back to safety</button>
+  <body>
+    <div class="wrapper">
+      <header>
+        <nav id="navbarek"></nav>
+        <h1>Oh no, HTTP 404!</h1>
+      </header>
+      <main>
+        <section class="error">
+            <p>Ta strona w teorii nie powinna istnieć, ale widzisz ją, bo strona, której poszukujesz nie istnieje.</p> 
+            <p>Chcesz stąd wyjść? Spokojna głowa! Kliknij w przycisk poniżej, aby wrócić na stronę główną.</p>
+            <button onclick="location.href='index.html'">backToSafety()</button>
+            <div class="smol"><small id="disclaimer"></small></div>
+        </section>
+        <section class="dodatek">
+          <code><span style="color:#9e56f1;">let</span> <span style="color:#74b6f7;">escape</span>; <br>
+          <span style="color:#666;">undefined</span></code>
+        </section>
+      </main>
+      <footer id="stopka"></footer>
     </div>
-
-<!-- <div class="stopka">
-<p>to nie CMS, to człowiek i jego wiedza, którą zdobył na wia i Tsiai (i bycie samoukiem). stworzone przez Kacpra. &#169; 2025</p>
-</div> -->
-
-</body>
+    <script>
+      const disclaimers = [
+        "Właściciel nie odpowiada za uszczerbki na zdrowiu, wywołane niewłaściwym użyciem powyższego buttona. Użytkowników uprasza się o przestrzeganie zasad BHP.",
+        "Przed użyciem zapoznaj się z treścią ulotki dołączonej do opakowania bądź skonsultuj się z lekarzem lub farmaceutą, gdyż każdy lek niewłaściwie stosowany zagraża Twojemu życiu lub zdrowiu.",
+        "Ten przycisk może zawierać śladowe ilości orzechów.",
+        "Klikając powyższy przycisk, zobowiązujesz się przestrzegać umowy licencyjnej, której nie ma."
+      ];
+        
+      const random = disclaimers[Math.floor(Math.random() * disclaimers.length)];
+        document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("disclaimer").textContent = random;
+      });
+    </script>
+  </body>
 </html>
