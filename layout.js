@@ -17,7 +17,8 @@
                     <li><a href="aboutme.html" title="O mnie" class="nav-link"><img src="images/aboutme.png" alt="O mnie"></a></li>
                     <li><a href="galeria.html" title="Galeria" class="nav-link"><img src="images/galeria.png" alt="Galeria"></a></li>
                     <li><a href="albums.html" title="Albumy, które siadły" class="nav-link"><img src="images/albums.png" alt="Albumy, które siadły"></a></li>
-                    <!-- <li><a href="portfolio.html" title="Portfolio i doświadczenie zawodowe (aka chwaliposty)" class="nav-link"><img src="" alt=""></a></li> TBA -->
+                    <!-- <li><a href="portfolio.html" title="Portfolio i doświadczenie zawodowe (aka chwaliposty)" class="nav-link"><img src="" alt=""></a></li> TBA 
+                    <li><a href="en/" title="English version" class="nav-link"><img src="" alt="">-->
                 </ul>
     `;
     const lo = document.getElementById("navbarek");

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#000000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nic tu ciekawego, możesz wyjść bez obaw że coś cię ominie. A tak serio to strona o mnie.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.wegrzvnxwski.github.io/wegrzvnxwskis-site/">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/icon.png">
+    <title>418 - Kacprowa strona</title>
+    <script src="layout.js" defer></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            color: #dedede;
+            font-family: "Google Sans", sans-serif;
+            min-height:100vh;
+            width:100%;
+            overflow-x: hidden;
+            background-color:#000;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('images/background.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            scroll-behavior: smooth;
+        }
+
+        .wrapper{
+            background-color: #000000e0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        h1{
+            font-family: "Indie Flower", monospace;
+            font-size:5rem;
+
+        }
+
+        .err-418-wrapper{
+            min-height: 100vh;
+            display: flex;
+            gap:20px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .err-418-block{
+            text-align:left;
+        }
+
+        .err-418-block p{
+            font-size:1.25rem;
+        }
+
+        .err-418-block img{
+            max-width: 600px;
+            height:auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <!-- <nav id="navbarek"></nav> -->
+        </header>
+        <main>
+            <section class="err-418-wrapper">
+                <div class="err-418-block">
+                    <img src="images/teapot.png" alt="teapot">
+                </div>
+                <div class="err-418-block">
+                    <h1>HTTP 418 - I'm a teapot</h1>
+                    <p>Niestety, ten serwer nie posiada opcji parzenia kawy. Ale herbata też dobra.</p>
+                </div>
+            </section>
+        </main>
+        <!-- <footer id="stopka"></footer> -->
+    </div>
+</body>
+</html>
