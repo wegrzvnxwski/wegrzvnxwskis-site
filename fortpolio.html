@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="theme-color" content="#000000">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Nic tu ciekawego, możesz wyjść bez obaw że coś cię ominie. A tak serio to strona o mnie.">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://www.wegrzvnxwski.github.io/wegrzvnxwskis-site/fortpolio">
+        <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Indie+Flower&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/icon.png">
+        <title>Fortpolio - Kacprowa strona</title>
+        <script src="layout.js" defer></script>
+        <script>
+            function openPopup(id) {
+                document.getElementById(id).style.display = "flex";
+            }
+
+            window.addEventListener('click', function(e) {
+                if (e.target.classList.contains('popup')) {
+                    closePopup(e.target.id);
+                }
+            });
+
+            window.addEventListener('keydown', function(e) {
+                if (e.key === "Escape") {
+                    document.querySelectorAll('.popup').forEach(p => {
+                        p.style.display = "none";
+                    });
+                }
+            });
+
+            function closePopup(id) {
+                document.getElementById(id).style.display = "none";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <nav id="navbarek"></nav>
+                <h1>Fortpolio</h1>
+                <p class="adno">czyli miejsce na zawodowe chwaliposty w poważnej formie* <br> <small>*poważnej jak na mnie</small></p>
+            </header>
+            <main>
+                <div class="popup" id="info" style="display:flex;">
+                        <div class="popup-inner">
+                            <span class="close-btn" onclick="closePopup('info')">&times;</span>
+                            <h2>Informacja</h2>
+                            <p>Od jakiegoś czasu przebywam na przerwie. Nie podaję daty końcowej, ponieważ – zupełnie szczerze – nie wiem, kiedy wrócę. Muszę podreperować zdrowie i psychikę. Jeśli coś komuś obiecałem, to wywiążę się z obietnicy w najbliższym możliwym terminie. Z góry dzięki za wyrozumiałość.</p>
+                            <p style="font-family:'Indie Flower', 'Google Sans', sans-serif;font-size:150%;font-weight:bolder;">– Kacper</p>
+                        </div>
+                    </div>
+                <div class="fortpolio">
+                    <section class="fortpolio-kawalek">
+                        <h2>O mnie</h2>
+                        <p>Kacper, uczeń technikum informatycznego, strasznie nie lubi swojego województwa. Zamierza z niego wyjechać... nie, dobra, nie umiem w narrację rodem z paradokumentów. Cześć, dzień dobry, na imię mi Kacper. Trochę więcej można o mnie poczytać <a href="aboutme">o tu</a>.</p>
+                    </section>
+                    <section class="fortpolio-kawalek" onclick="openPopup('umiejetnosci')">
+                        <h2>Umiejętności</h2>
+                        <ul class="skille">
+                            <li>HTML5/CSS3</li>
+                            <li>JavaScript</li>
+                            <li>Linux</li>
+                            <li>Sieci</li>
+                            <li>Virtualmin / Webmin</li>
+                            <li>Frontend</li>
+                            <li>Backend (light)</li>
+                        </ul>
+                    </section>
+                    <div class="popup" id="umiejetnosci">
+                        <div class="popup-inner">
+                            <span class="close-btn" onclick="closePopup('umiejetnosci')">&times;</span>
+                            <h2>Więcej o skillach</h2>
+                            <ul>
+                                <li><b>HTML5/CSS3</b> — robię layouty ręcznie, bez frameworkwynalazków</li>
+                                <li><b>JavaScript</b> — ogarniam vanilla na poziomie A1</li>
+                                <li><b>Linux</b> – muszę coś dodawać?
+                                <img src="images/photos/Screenshot from 2026-01-04 20-41-45.png" alt="mój pulpit" style="max-width:500px;height:auto;padding:0 10px;"></li>
+                                <li><b>Sieci</b> — dzień dobry, z tej strony Genowefa Żyglińska, dzwonię w sprawie Pańskiego double NATa</li>
+                                <li><b>Virtualmin / Webmin</b> — liznąłem i pokochałem. Prowadziłem własne vhosty pierwszego kontaktu</li>
+                                <li><b>Frontend</b> — semantycznie, minimalistycznie, kompletnie</li>
+                                <li><b>Backend (light)</b> — kocham ERD, MySQL też mi niestraszny</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <section class="fortpolio-kawalek" onclick="openPopup('klienci')">
+                        <h2>Zadowoleni <sup style="font-weight:normal;font-size:60%">[<span style="font-style:italic;color:rgb(0, 110, 255);">citation needed</span>]</sup> klienci </h2>
+                        <ul>
+                            <li>może i właśnie miałbym jednego, ale shit happens. no trudno.</li>
+                            <li>Chcesz się tu znaleźć? Napisz, postaram się pomóc w zamian za umieszczenie projektu na tę stronę.</li>
+                        </ul>
+                    </section>
+                    <div class="popup" id="klienci">
+                        <div class="popup-inner">
+                            <span class="close-btn" onclick="closePopup('klienci')">&times;</span>
+                            <h2>?</h2>
+                            <p>Lorem ipsum... znaczy tutaj będą ewentualne zeznania albo słowa uznania albo zażalenia od osób, z którymi miałem przyjemność współpracować.</p>
+                            <p>Chcesz, żeby Twoje miłe słówko znalazło się w tym popupie? Napisz, coś ustalimy</p>
+                        </div>
+                    </div>
+                    <section class="fortpolio-kawalek" onclick="openPopup('projekty')">
+                        <h2>Moje dotychczasowe projekty</h2>
+                        <ul>
+                            <li>Kacprowa Strona</li>
+                            <!-- <li>Księgarnia BoTak</li> -->
+                        </ul>
+                    </section>
+                    <div class="popup" id="projekty">
+                        <div class="popup-inner">
+                            <span class="close-btn" onclick="closePopup('projekty')">&times;</span>
+                            <h2>O projektach parę słów więcej</h2>
+                            <h3>Kacprowa Strona</h3>
+                            <p>Pierwsza strona, którą postanowiłem napisać z własnej woli. Z początku strasznie dziurawa, obecnie nabiera blasku. Zawiera podstronę błędu HTTP 418 (choć ten jest przez GitHub Pages nieobsługiwany), jako jedna z nielicznych. <br> Strona powstała przy użyciu języków: HTML i CSS, z lekką nutką vanilla JS.</p>
+                            <img src="images/screens/kacprowa-strona.png" alt="zrzut ekranu Kacprowej Strony">
+                            <!-- <h3>Księgarnia BoTak</h3>
+                            <p>Projekt tworzony w ramach praktyki zawodowej, typowe "klepię bo muszę". Pełna wersja zawierała połączenie z bazą danych, jednakże funkcjonalność ta została usunięta (ze względu na ograniczenia GH Pages). Strona istnieje w dwóch odmianach: Bootstrap oraz Tailwind. Na poniższym zrzucie ekranu pokazana została wersja Tailwind.</p>
+                            <img src="https://placehold.co/1920x1080" alt="zrzut ekranu 2"> -->
+                        </div>
+                    </div>
+                    <section class="fortpolio-kawalek" onclick="openPopup('inneproj')">
+                        <h2>Inne projekty (spoza witryn)</h2>
+                        <small>Psst... one wszystkie są dostępne na moim GitHubie.</small>
+                        <ul>
+                            <li>new-homepage</li>
+                            <!-- <li>gnome-AMOLEDd</li> -->
+                        </ul>
+                    </section>
+                    <div class="popup" id="inneproj">
+                        <div class="popup-inner">
+                            <span class="close-btn" onclick="closePopup('inneproj')">&times;</span>
+                            <h2>Inne projekty</h2>
+                            <h3><a href="https://github.com/wegrzvnxwski/new-homepage" target="_blank">new-homepage</a></h3>
+                            <p>Powstało pod wpływem obrzydzenia na widok strony nowej karty w Brave. W pełni customizowalne, dobrze opisane.</p>
+                            <img src="https://repository-images.githubusercontent.com/1092839341/910e89a1-5dab-48d0-9b28-75d72546a82d" alt="banerek">
+                            <!-- <h3>gnome-AMOLEDd</h3>
+                            <p>Tryb AMOLED dla GNOME, gotowy do wpięcia w każdy inny motyw. Pisany dla GNOME 46, a i tak niedokończony (dziękujemy za upychanie styli do JSa).</p> -->
+                        </div>
+                    </div>
+                </div>
+                <section class="cv" onclick="openPopup('cv-pop')">
+                    <p>Tutaj kiedyś pojawi się moje CV z Deadname&copy; Inside&trade;, jednakże z chęcią przyjmę projekty eksperymentalne. Moje informacje kontaktowe są <a href="aboutme">tutaj</a>. <br> Kliknij tutaj, aby dowiedzieć się więcej.</p>
+                </section>
+                <div class="popup" id="cv-pop">
+                    <div class="popup-inner">
+                        <span class="close-btn" onclick="closePopup('cv-pop')">&times;</span>
+                        <h2>Co rozumiem przez "projekty eksperymentalne"?</h2>
+                        <p>Jak wspomniałem w sekcji O mnie – uczę się. Nie przyjmuję zleceń komercyjnych, przynajmniej na razie. Ale jeśli masz stronę, która kurzy się od strony frontu i potrzebuje drugiego życia – chętnie przetestuję na niej swoje umiejętności.</p>
+                        <p>Takie projekty traktuję jako formę nauki: są niekomercyjne, mogą potrwać miesiąc lub dłużej, a czasem... mogę się wywalić po drodze. Jeśli Ci to nie przeszkadza – napisz. Przeklikam, potestuję, pogrzebię i może coś z tego będzie. :)</p>
+                    </div>
+                </div>
+            </main>
+            <footer id="stopka"></footer>
+        </div>
+    </body>
+</html>

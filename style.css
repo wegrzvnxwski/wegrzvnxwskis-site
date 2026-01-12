@@ -425,8 +425,9 @@ h1{
   text-align:center;
 }
 
-.cv a{
+.cv a, .fortpolio-kawalek a, .popup-inner a{
   color:#7ca9f1;
+  text-decoration: none;
 }
 
 .cv:hover{
