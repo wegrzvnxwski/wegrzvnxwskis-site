@@ -116,151 +116,114 @@
 
         let modly = false;
 
-        async function ameno() { //bazowy czas piosenki: 4:05 - 245000, chyba że lepszego mp3 znajdziesz xD
-            // dlaczego każdy lyric jest zrobiony osobno? bo bardzo mi zależało na idealnym zgraniu czasowym.
+        const audio = document.getElementById('ameno-snd');
+        const btn = document.getElementById('ameno-btn');
+
+        // Data-driven sequence: set `text` then wait `duration` milliseconds
+        const lyricsSequence = [
+            { text: "", duration: 8050 },
+            { text: "Carmen Ameno ab ERA cantabimus.", duration: 5000 },
+            { text: "", duration: 5000 },
+            { text: "Dorime...", duration: 2240 },
+            { text: "Interimo adapare, dorime...", duration: 4510 },
+            { text: "Ameno, ameno", duration: 2490 },
+            { text: "Latire, latiremo", duration: 4500 },
+            { text: "Dorime", duration: 4110 },
+            { text: "Ameno", duration: 1890 },
+            { text: "Omenare imperavi ameno", duration: 4360 },
+            { text: "Dimere, dimere matiro", duration: 4740 },
+            { text: "Matiremo, ameno", duration: 6010 },
+            { text: "Omenare imperavi emunari", duration: 3760 },
+            { text: "Ameno", duration: 750 },
+            { text: "Omenare imperavi emunari", duration: 3990 },
+            { text: "Ameno", duration: 2250 },
+            { text: "Ameno dore", duration: 3250 },
+            { text: "Ameno dorime", duration: 5000 },
+            { text: "Ameno dorime", duration: 3510 },
+            { text: "Ameno dom", duration: 2490 },
+            { text: "Dorime reo", duration: 3250 },
+            { text: "Ameno dorime", duration: 4750 },
+            { text: "Ameno dorime", duration: 3500 },
+            { text: "Dorime am", duration: 4750 },
+            { text: "Ameno", duration: 4490 },
+            { text: "Ameno", duration: 3270 },
+            { text: "Ameno", duration: 2490 },
+            { text: "Omenare imperavi ameno", duration: 4510 },
+            { text: "Dimere, dimere matiro", duration: 4730 },
+            { text: "Matiremo, ameno", duration: 6760 },
+            { text: "Omenare imperavi emunari", duration: 3760 },
+            { text: "Ameno", duration: 990 },
+            { text: "Omenare imperavi emunari", duration: 3750 },
+            { text: "Ameno", duration: 2500 },
+            { text: "Ameno dore", duration: 3240 },
+            { text: "Ameno dorime", duration: 4760 },
+            { text: "Ameno dorime", duration: 3740 },
+            { text: "Ameno dom", duration: 2260 },
+            { text: "Dorime reo", duration: 3240 },
+            { text: "Ameno dorime", duration: 4770 },
+            { text: "Ameno dorime", duration: 3230 },
+            { text: "Dorime am", duration: 3020 },
+            { text: "Ameno, ameno", duration: 2990 },
+            { text: "Ameno dorime", duration: 4750 },
+            { text: "Ameno dorime", duration: 3250 },
+            { text: "Dorime, dorime, dorime...", duration: 5005 },
+            { text: "", duration: 5005 },
+            { text: "Ameno", duration: 1980 },
+            { text: "Ameno dore", duration: 3510 },
+            { text: "Ameno dorime", duration: 4500 },
+            { text: "Ameno dorime", duration: 3500 },
+            { text: "Ameno dom", duration: 2250 },
+            { text: "Dorime reo", duration: 3740 },
+            { text: "Ameno dorime", duration: 4510 },
+            { text: "Ameno dorime", duration: 3760 },
+            { text: "Ameno, ameno", duration: 4730 },
+            { text: "Ameno", duration: 1010 },
+            { text: "Ameno dorime", duration: 3990 },
+            { text: "Ameno", duration: 750 },
+            { text: "Ameno dorime", duration: 3010 },
+            { text: "Ameno dom", duration: 4000 },
+            { text: "Dorime reo, ameno", duration: 2100 },
+            { text: "Ameno dorime", duration: 2150 },
+            { text: "Ameno, ameno dorime...", duration: 2000 },
+            { text: "", duration: 10650 }
+        ];
+
+        function cleanup() {
+            modly = false;
+            btn.classList.remove('ukryty');
+            btn.classList.add('widoczny-btn');
+            btn.disabled = false;
+            btn.innerText = "Itera orationem";
+        }
+
+        audio.addEventListener('ended', () => {
+            if (modly) cleanup();
+        });
+
+        async function ameno() {
             if (modly) return;
             modly = true;
-            const audio = document.getElementById('ameno-snd');
-            audio.pause();
-            audio.currentTime = 0;
-            audio.play();
-            document.getElementById('ameno-btn').classList.add('ukryty');
-            console.clear();
+            btn.disabled = true;
+            btn.classList.add('ukryty');
             console.log("Oratio coepit... flectite genua, fideles.");
-            await sleep(8050);
-            zmienLyric("Carmen Ameno ab ERA cantabimus.");
-            await sleep(5000);
-            zmienLyric("");
-            await sleep(5000);
-            zmienLyric("Dorime...");
-            await sleep(2240);
-            zmienLyric("Interimo adapare, dorime...");
-            await sleep(4510);
-            zmienLyric("Ameno, ameno");
-            await sleep(2490);
-            zmienLyric("Latire, latiremo");
-            await sleep(4500);
-            zmienLyric("Dorime");
-            await sleep(4110);
-            zmienLyric("Ameno");
-            await sleep(1890);
-            zmienLyric("Omenare imperavi ameno");
-            await sleep(4360);
-            zmienLyric("Dimere, dimere matiro");
-            await sleep(4740);
-            zmienLyric("Matiremo, ameno");
-            await sleep(6010);
-            zmienLyric("Omenare imperavi emunari");
-            await sleep(3760);
-            zmienLyric("Ameno");
-            await sleep(750);
-            zmienLyric("Omenare imperavi emunari");
-            await sleep(3990);
-            zmienLyric("Ameno");
-            await sleep(2250);
-            zmienLyric("Ameno dore");
-            await sleep(3250);
-            zmienLyric("Ameno dorime");
-            await sleep(5000);
-            zmienLyric("Ameno dorime");
-            await sleep(3510);
-            zmienLyric("Ameno dom");
-            await sleep(2490);
-            zmienLyric("Dorime reo");
-            await sleep(3250);
-            zmienLyric("Ameno dorime");
-            await sleep(4750);
-            zmienLyric("Ameno dorime");
-            await sleep(3500);
-            zmienLyric("Dorime am");
-            await sleep(4750);
-            zmienLyric("Ameno");
-            await sleep(4490);
-            zmienLyric("Ameno");
-            await sleep(3270);
-            zmienLyric("Ameno");
-            await sleep(2490);
-            zmienLyric("Omenare imperavi ameno");
-            await sleep(4510);
-            zmienLyric("Dimere, dimere matiro");
-            await sleep(4730);
-            zmienLyric("Matiremo, ameno");
-            await sleep(6760);
-            zmienLyric("Omenare imperavi emunari");
-            await sleep(3760);
-            zmienLyric("Ameno");
-            await sleep(990);
-            zmienLyric("Omenare imperavi emunari");
-            await sleep(3750);
-            zmienLyric("Ameno");
-            await sleep(2500);
-            zmienLyric("Ameno dore");
-            await sleep(3240);
-            zmienLyric("Ameno dorime");
-            await sleep(4760);
-            zmienLyric("Ameno dorime");
-            await sleep(3740);
-            zmienLyric("Ameno dom");
-            await sleep(2260);
-            zmienLyric("Dorime reo");
-            await sleep(3240);
-            zmienLyric("Ameno dorime");
-            await sleep(4770);
-            zmienLyric("Ameno dorime");
-            await sleep(3230);
-            zmienLyric("Dorime am");
-            await sleep(3020);
-            zmienLyric("Ameno, ameno");
-            await sleep(2990);
-            zmienLyric("Ameno dorime");
-            await sleep(4750);
-            zmienLyric("Ameno dorime");
-            await sleep(3250);
-            zmienLyric("Dorime, dorime, dorime...")
-            await sleep(5005);
-            zmienLyric("");
-            await sleep(5005);
-            zmienLyric("Ameno");
-            await sleep(1980);
-            zmienLyric("Ameno dore");
-            await sleep(3510);
-            zmienLyric("Ameno dorime");
-            await sleep(4500);
-            zmienLyric("Ameno dorime");
-            await sleep(3500);
-            zmienLyric("Ameno dom");
-            await sleep(2250);
-            zmienLyric("Dorime reo");
-            await sleep(3740);
-            zmienLyric("Ameno dorime");
-            await sleep(4510);
-            zmienLyric("Ameno dorime");
-            await sleep(3760);
-            zmienLyric("Ameno, ameno");
-            await sleep(4730);
-            zmienLyric("Ameno");
-            await sleep(1010);
-            zmienLyric("Ameno dorime");
-            await sleep(3990);
-            zmienLyric("Ameno");
-            await sleep(750);
-            zmienLyric("Ameno dorime");
-            await sleep(3010);
-            zmienLyric("Ameno dom");
-            await sleep(4000);
-            zmienLyric("Dorime reo, ameno");
-            await sleep(2100);
-            zmienLyric("Ameno dorime");
-            await sleep(2150);
-            zmienLyric("Ameno, ameno dorime...");
-            await sleep(2000);
-            zmienLyric("");
-            await sleep(10650);
+
+            // reset and try to play audio (ignore play rejections)
+            try {
+                audio.pause();
+                audio.currentTime = 0;
+                await audio.play().catch(() => {});
+            } catch (e) {
+                // ignore
+            }
+
+            for (const step of lyricsSequence) {
+                if (!modly) break; // allow early exit if audio ended
+                zmienLyric(step.text);
+                await sleep(step.duration);
+            }
+
             console.log("Oratio completa est. Surgite.");
-            modly = false;
-            document.getElementById('ameno-btn').classList.remove('ukryty');
-            document.getElementById('ameno-btn').classList.add('widoczny-btn');
-            document.getElementById('ameno-btn').innerText = "Itera orationem";
+            cleanup();
         }
 
     </script>
