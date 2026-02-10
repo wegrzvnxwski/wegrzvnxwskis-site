@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="theme-color" content="#000000">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Nic tu ciekawego, możesz wyjść bez obaw że coś cię ominie. A tak serio to strona o mnie.">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://www.wegrzvnxwski.github.io/wegrzvnxwskis-site/fortpolio">
+        <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Indie+Flower&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/icon.png">
+        <title>Disclaimery - Kacprowa strona</title>
+        <script src="layout.js" defer></script>
+        <style>
+            main{
+                margin:20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #dsclmr{
+                font-size:1.35rem;
+                margin-top:10px;
+                text-align: center;
+                font-style: italic;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            .disc-form {
+                margin-top: 20px;
+                gap:10px;
+                display: flex;
+            }
+
+            .disc-form label {
+                display: flex;
+                flex-direction: column;
+                font-size: 1.1rem;
+                gap:5px;
+            }
+
+            .disc-form input[type="text"],
+            .disc-form textarea {
+                background-color: #111;
+                color: #f4f4f4;
+                padding: 10px;
+                font-size: 1rem;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                max-width: 500px;
+            }
+
+            .disc-form textarea {
+                max-height:400px;
+                resize: none;
+            }
+
+            .disc-form fieldset {
+                border: none;
+                margin: 20px auto;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .disc-form fieldset label {
+                flex-direction: row; /* nadpisuje column */
+                align-items: center;
+            }
+
+            .disc-form input[type="radio"] {
+                margin-right: 8px;
+                accent-color: #375488;
+            }
+
+            .disc-form button {
+                margin-top:15px;
+                padding: 10px;
+                font-size: 1.1rem;
+                color: #f4f4f4;
+                background-color: #000;
+                border: 1px solid #f4f4f4;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .disc-form button:hover {
+                background-color: #222;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <nav id="navbarek"></nav>
+                <h1>Disclaimery</h1>
+                <p id="dsclmr"></p>
+            </header>
+            <main>
+                <h2>Chcesz zgłosić własnego disclaimera?</h2>
+                <p>Masz jakiś pomysł? Podziel się nim!</p>
+                <div class="disc-form">
+                    <form action="https://formspree.io/f/mnjbjjlv" method="POST">
+                        <label>
+                            Twój nick na socialkach (opcjonalnie):
+                            <input type="text" name="nickname">
+                        </label>
+                        <fieldset id="radios">
+                            <legend>Czy chcesz, żebym dodał twój nick do creditsów? (zostanie on umieszczony w kodzie strony 404, tuż obok twojej propozycji)</legend>
+                            <label>
+                                <input type="radio" name="credits" value="yes"> Tak
+                            </label>
+                            <label>
+                                <input type="radio" name="credits" value="no"> Nie
+                            </label>
+                            <label>
+                                <input type="radio" name="credits" value="maybe" title="Twoje objawienie w kodzie strony zależeć będzie od koła fortuny."> Nie wiem, zaskocz mnie (zaznacz to również jeśli nie podałeś nicku, tak dla jaj)
+                            </label>
+                        </fieldset>
+                        <label>
+                            Twój disclaimer:
+                            <textarea name="disclaimer" required></textarea>
+                        </label>
+                        <button type="submit">onclick="wyslijMnie()"</button>
+                    </form>
+                </div>
+            </main>
+            <footer id="stopka"></footer>
+        </div>
+        <script>
+            const disclaimers = [
+                "Przed użyciem zapoznaj się z treścią ulotki dołączonej do opakowania bądź skonsultuj się z lekarzem lub farmaceutą, gdyż każdy lek niewłaściwie stosowany zagraża Twojemu życiu lub zdrowiu.",
+                "Przycisk może powodować nagłe pragnienie podróży na stację Orzesze Jaśkowice. W takiej sytuacji uprasza się o usunięcie się z drogi pociągom towarowym.",
+                "Kliknij mnie, jeśli chcesz utknąć w 127.0.0.1.",
+                "W celu zapewnienia bezpieczeństwa, jeśli obciążenie systemu przekroczy wydajność danej konfiguracji, system może tymczasowo wyłączyć niektóre porty USB.",
+                "Produktu nie należy używać w pobliżu wody — na przykład w pobliżu wanny, umywalki, zlewu czy miednicy, w wilgotnej piwnicy lub w pobliżu basenu.",
+                "Nie należy używać tego produktu do zgłaszania wycieku gazu, gdy produkt znajduje się w jego sąsiedztwie.",
+                "Wróbel zwyczajny, wróbel domowy (Passer domesticus) – gatunek małego ptaka osiadłego z rodziny wróbli (Passeridae), zamieszkującego Europę, Azję i północną Afrykę. Pierwotnie ptak półpustyń i stepów, pochodzi prawdopodobnie z Półwyspu Arabskiego i Azji Mniejszej. Skolonizował ludzkie osiedla wraz z rozwojem rolnictwa, prawdopodobnie przed kilkoma tysiącami lat. Występuje wszędzie tam, gdzie mieszka człowiek. Introdukowany (celowo lub przypadkiem) w Ameryce Północnej, Ameryce Południowej, Australazji i południowej Afryce. W XIX i XX wieku należał do najpowszechniej występujących gatunków na terenach Polski, przenikając do języka potocznego i kultury ludowej we wszystkich regionach. W roku 1984, kiedy ochroną gatunkową objęto prawie wszystkie ptaki wróblowe, dla wróbla wyznaczono jedynie wiosenny okres ochronny. W latach dziewięćdziesiątych zaobserwowano spadek liczebności wróbla. W roku 1995 wróbel został objęty ścisłą ochroną gatunkową. Nadal jest to bardzo liczny ptak lęgowy, jednak wbrew powszechnemu mniemaniu nie jest najliczniej występującym ptakiem lęgowym w Polsce. Według szacunków Monitoringu Pospolitych Ptaków Lęgowych, w latach 2013–2018 krajowa populacja wróbla liczyła 6 264 000 – 6 856 000 par lęgowych, co dawało mu trzecie miejsce po skowronku i ziębie.",
+                "Gołąbki – Przepis. Składniki: 1 kapusta, 500g mielonego mięsa, 1 szklanka ryżu, 1 cebula, sól, pieprz, papryka, 2 puszki sosu pomidorowego. Przygotowanie: gotuj kapustę 10-15 min, oddzielaj liście, wymieszaj mięso, ryż, cebulę, przyprawy, wyłóż farsz na liście, zawiń, ułóż gołąbki w garnku, gotuj 1-1,5 godziny na małym ogniu. Podawaj: ciepłe z sosem pomidorowym. Smacznego!",
+                "Twórca przycisku zarzeka się, że nie ma ADH... o, jaka ładna sikorka!",
+                "Check my pitch up, smack my bitch up!",
+                "Znajdź inną metodę na wydostanie się stąd, przycisk pojechał na emeryturę.",
+                "It's never lupus.", //House MD theme starts playing
+                "Masz na nazwisko Wróbel i pochodzisz ze Śląska? Spokojnie, jesteś jednym z wielu NPC. Ale serio, jest was 7569, więcej was matka nie miała? To najwięcej w Polsce (dane z 2025).", //Kuba, nie bij, plz
+                "Koła autobusu kręcą się, kręcą się, kręcą się",
+                "Klikając ten przycisk, zgadzasz się na sudo rm -rf / --no-preserve-root",
+                "Autor jest substancją ADR.",
+                "Ten przycisk może powodować nagłe pragnienie nauki języka JavaScript. (RATUNKU -autor)",
+                "nie ma mnie, ale że jaki komunikat? co?",
+                "zrobiono przy użyciu xiaomi miui turbo zaisty button factory v6.9",
+                "Ten przycisk zawiera treści NSFW w postaci stópek autora strony. Spokojnie, są one ukryte za paywallem.",
+                "Uwaga, przycisk zawiera głupiego disclaimera, który ma bardzo dużo wspólnego z rzeczywistością!",
+            ];
+                
+            const random = disclaimers[Math.floor(Math.random() * disclaimers.length)];
+                document.addEventListener("DOMContentLoaded", () => {
+                document.getElementById("dsclmr").textContent = random;
+            });
+        </script>
+    </body>
+</html>
