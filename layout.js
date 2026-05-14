@@ -2,7 +2,7 @@
   function wrzucStopke() {
     const html = `
             <div class="the-veri-end">
-                <small>&copy; <span id="rok"></span> Kacprowa Strona. Wszystkie prawa nie istnieją.</small>
+                <small>&#x1F12F; <span id="rok"></span> Kacprowa Strona. Wszystkie prawa nie istnieją.</small>
             </div>
     `;
     const lo = document.getElementById("stopka");

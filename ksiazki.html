@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#000000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nic tu ciekawego, możesz wyjść bez obaw że coś cię ominie. A tak serio to strona o mnie.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.wegrzvnxwski.github.io/wegrzvnxwskis-site/aboutme">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/house-md" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/icon.png">
+    <title>Książkowe polecajki - Kacprowa strona</title>
+    <script src="layout.js" defer></script>
+    <script>
+        async function zaladujRecenzje() {
+            try {
+                const response = await fetch('books.json');
+                const ksiazki = await response.json();
+                const smietnik = document.getElementById('lista-recenzji');
+
+                ksiazki.forEach((ksiazka, i) => {
+                    const sekcja = document.createElement('section');
+                    sekcja.className = 'recenzja-blok';
+
+                    if (i % 2 === 0){
+                        sekcja.className = 'recenzja-blok ksiazka-lewak';
+                    } 
+                    else{
+                        sekcja.className = 'recenzja-blok ksiazka-prawak';
+                    }
+
+                    sekcja.innerHTML = `
+                        <div class="okladka-kontener">
+                            <img src="${ksiazka.okladka}" alt="${ksiazka.tytul}">
+                        </div>
+                        <div class="tresc-recenzji">
+                            <h3>${ksiazka.tytul}</h3>
+                            <h4>${ksiazka.autor}</h4>
+                            <p>${ksiazka.opinia}</p>
+                        </div>
+                    `;
+                    smietnik.appendChild(sekcja);
+                });
+            } 
+            catch(error){
+                console.error("Błąd ładowania książek:", error);
+            }
+        }
+        window.onload = zaladujRecenzje;
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav id="navbarek"></nav>
+            <h1>Książki, które czytałem</h1>
+            <p class="adno">a żaden ze mnie mol książkowy. chyba.</p>
+        </header>
+        <main>
+            <noscript>
+                <p style="text-align: center;">Cześć! Ta strona nie zadziała bez włączonego JavaScriptu. Spokojnie, nie używam trackerów, reklam czy innych ciasteczek. Jeśli możesz, włącz proszę obsługę skryptów. Jeśli dalej widzisz ten komunikat (nawet po odświeżeniu strony!), skontaktuj się ze swoim lokalnym informatykiem. Dzięki! –Kapi</p>
+            </noscript>
+            <div id="lista-recenzji"></div>
+        </main>
+        <footer id="stopka"></footer>
+    </div>
+</body>
+</html>

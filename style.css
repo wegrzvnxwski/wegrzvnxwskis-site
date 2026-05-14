@@ -440,3 +440,93 @@ h1{
 .cv:hover{
   cursor:pointer;
 }
+
+/* =============== KSIAZKI.HTML =============== */
+
+.recenzja-blok {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.ksiazka-lewak {
+    flex-direction: row;
+    margin-left: 2.5%;
+}
+
+.ksiazka-prawak {
+    flex-direction: row-reverse;
+    margin-right: 2.5%;
+}
+
+.okladka-kontener {
+    width: 150px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.okladka-kontener img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tresc-recenzji {
+    max-width: 600px;
+}
+
+.tresc-recenzji h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.tresc-recenzji h4 {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.tresc-recenzji p {
+    margin: 10px 0 0;
+    line-height: 1.6;
+}
+
+/* Responsywka */
+@media (max-width: 768px) {
+    .recenzja-blok {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+        gap: 15px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .ksiazka-lewak,
+    .ksiazka-prawak {
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .okladka-kontener {
+        width: 120px;
+        height: 180px;
+    }
+
+    .tresc-recenzji {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .tresc-recenzji h3 {
+        font-size: 1.3em;
+    }
+
+    .tresc-recenzji h4 {
+        font-size: 1.1em;
+    }
+}
