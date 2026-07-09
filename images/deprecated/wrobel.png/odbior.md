@@ -45,6 +45,8 @@ Nazwisko.
 
 # MAŁY, ZABAWNY TIDBIT
 
-Istnieje takie cos, nazywa się Kodeks Postępowania Karnego. W nim jest taki artykuł, art. 230, który ma bardzo zabawny paragraf, paragraf 2. 
+Istnieje takie cos, nazywa się Kodeks Postępowania Karnego. W nim jest taki artykuł, art. 230, który ma bardzo zabawny paragraf, paragraf 2.
+
 > "Należy również zwrócić osobie uprawnionej zatrzymane rzeczy niezwłocznie po stwierdzeniu ich zbędności dla postępowania karnego. Jeżeli wyniknie spór co do własności rzeczy, a nie ma dostatecznych danych do niezwłocznego rozstrzygnięcia, odsyła się osoby zainteresowane na drogę procesu cywilnego."
+
 Co to oznacza? Jeśli kopie są gotowe, a organy się lekko mówiąc opierdzielają, możesz próbować podbić (czy to samemu, czy proponując to prawnikowi) o oddanie sprzętu. Bo to nie sprzęt jest ważny, co dane na nim, a jeśli kopie są gotowe... to po co im trzymać budę?
