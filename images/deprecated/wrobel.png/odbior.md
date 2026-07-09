@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /odbior
+title: odbior
 ---
 
 Nadszedł w końcu ten piękny dzień. Dostajesz swój sprzęt z powrotem. Ale wiadomo, niebieskim się nie ufa. Dlatego też, zanim zaczniesz cieszyć się swoim sprzętem, musisz go sprawdzić. A gdyby coś się nie zgadzało? To też tu jestem.
